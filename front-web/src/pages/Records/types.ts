@@ -14,4 +14,4 @@ export type RecordItem = {
     genreName: string;
 }
 
-export type Platform = 'XBOX' | 'PC' | 'PLAYSTATION';
+export type Platform = 'XBOX' | 'PC' | 'Playstation';
