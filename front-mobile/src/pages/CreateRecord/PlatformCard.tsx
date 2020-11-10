@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
 import { Text, StyleSheet } from 'react-native';
-import { GamePlatform } from  './types'
+import { GamePlatform } from  './types';
 import { RectButton } from 'react-native-gesture-handler';
 
 type Props = {

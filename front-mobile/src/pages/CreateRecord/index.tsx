@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
 import { StyleSheet, Text, View, TextInput, Alert } from 'react-native';
-import PlatfomCard from './PlataformCard';
+import PlatfomCard from './PlatformCard';
 import { GamePlatform, Game } from './types';
 import RNPickerSelect from 'react-native-picker-select';
 import axios from 'axios';
@@ -94,19 +94,19 @@ const CreateRecord = () => {
                 <PlatfomCard 
                   platform="PC"  
                   icon="laptop"
-                  onChange={() => handleChangePlatform} 
+                  onChange={handleChangePlatform} 
                   activePlatform={platform}
                   />
                 <PlatfomCard 
                   platform="XBOX"
                   icon="xbox"
-                  onChange={() => handleChangePlatform} 
+                  onChange={handleChangePlatform} 
                   activePlatform={platform}
                   />
                 <PlatfomCard 
                   platform="PLAYSTATION" 
                   icon="playstation"
-                  onChange={() => handleChangePlatform} 
+                  onChange={handleChangePlatform} 
                   activePlatform={platform}
                 />
               </View>
