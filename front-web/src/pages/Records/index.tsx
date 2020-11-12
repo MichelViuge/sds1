@@ -6,7 +6,7 @@ import { formatDate } from './helpers';
 import Pagination from './Pagination';
 import Filters from '../../components/Filters';
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://sds1-mit.herokuapp.com';
 
 const Records = () => {
 
@@ -14,8 +14,10 @@ const Records = () => {
     const [ activePage, setActivePage] = useState(0);
 
     useEffect(() => {
-        Axios.get(`${BASE_URL}/records?linesPerPage=12&page=${activePage}`)
-            .then(response => setRecordsResponse(response.data));
+        Axios.get(`${BASE_URL}/records?linesPerPage=12&page=${activePage}&orderBy=moment&direction=DESC`)
+            .then(response => {setRecordsResponse(response.data)
+            console.log(response.data)}
+            );
     }, [activePage]);
 
     const handlePageChange = (index: number) => {
